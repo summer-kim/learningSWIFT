@@ -5,7 +5,18 @@
 //  Created by dasom kim on 2023/03/17.
 //
 
-import Foundation
+var Book1 = Book(bookName: "Little Mermaid", genre: "story", author: "Andersen")
+var Book2 = Book(bookName: "Sapiens", genre: "History", author: "Yuval Harari")
+var Book3 = Book(bookName: "Guns, Germs, and Steel", genre: "History", author: "Jared Diamond")
 
-print("Hello, World!")
+//Book1.checkingBook()
+
+var myBook = BookManager()
+myBook.addBook(bookObject: Book1)
+myBook.addBook(bookObject: Book2)
+myBook.addBook(bookObject: Book3)
+
+let allBooks = myBook.showAllBooks()
+print(allBooks)
+
 
