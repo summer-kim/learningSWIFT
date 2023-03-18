@@ -16,7 +16,16 @@ myBook.addBook(bookObject: Book1)
 myBook.addBook(bookObject: Book2)
 myBook.addBook(bookObject: Book3)
 
-let allBooks = myBook.showAllBooks()
-print(allBooks)
+let allBooksCnt = myBook.countAllBooks()
+print(allBooksCnt)
+
+let BookTarget = myBook.searchBook(name: "Sapiens")
+if BookTarget != nil {
+    BookTarget!.checkingBook()
+}
+
+myBook.removeBook(name: "Sapiens")
+let allBooksInfo = myBook.showAllBooks()
+print(allBooksInfo)
 
 

@@ -1,3 +1,4 @@
+import Foundation
 
 class BookManager {
     
@@ -18,15 +19,28 @@ class BookManager {
         
     }
     
-//    func countAllBooks() -> Int{
-//
-//    }
-//
-//    func searchBook(name: String) -> String?{
-//
-//    }
-//
-//    func removeBook(name: String){
-//
-//    }
+    func countAllBooks() -> Int{
+        return bookList.count
+    }
+
+    func searchBook(name: String) -> Book?{
+        
+        for book in bookList {
+            if book.bookName == name {
+               return book
+            }
+        }
+        return nil
+        
+    }
+
+    func removeBook(name: String){
+
+        for book in bookList {
+            if book.bookName == name {
+                let bookIndex = (bookList as NSArray).index(of: book)
+                bookList.remove(at: bookIndex)
+            }
+        }
+    }
 }
